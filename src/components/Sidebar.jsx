@@ -28,15 +28,22 @@ const Sidebar = () => {
       })}
      </div>
       <div className='flex flex-col gap-y-3 py-4 mt-4'>
-        <div className={`flex w-full justify-between items-center ${itemAmount? 'opacity-100': 'opacity-0'}`}>
+        <div className='flex w-full justify-between items-center'>
           {/* total price */}
-          <div className='uppercase font-semibold'>
+          {itemAmount?
+            <div className='uppercase font-semibold'>
             <span className='mr-2'>total price: $ {parseFloat(price).toFixed(2)}</span>
           </div>
+          :null
+          }
           {/* clear cart */}
-          <div onClick={()=>{clearCart()}} className='py-4 cursor-pointer w-12 h-12 text-white flex justify-center items-center text-xl bg-gray-600'>
+          {
+            itemAmount?
+            <div onClick={()=>{clearCart()}} className='py-4 cursor-pointer w-12 h-12 text-white flex justify-center items-center text-xl bg-gray-600'>
             <FiTrash2 />
-            </div>
+            </div>:
+            null
+          }
         </div>
       </div>
       {allAmount()}

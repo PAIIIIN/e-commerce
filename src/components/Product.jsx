@@ -3,7 +3,6 @@ import React,{useContext} from 'react';
 import { Link } from 'react-router-dom';
 import {BsPlus , BsEyeFill} from 'react-icons/bs'
 import { CartContext } from '../contexts/CartContext';
-
 const Product = ({product}) => {
   const{id,image,category ,title,price} = product;
 
@@ -23,10 +22,10 @@ const Product = ({product}) => {
               <BsPlus className='text-3xl'/>
             </div>
           </button>
-          <Link to={`/product/${id}`} className='w-12 h-12 bg-white flex 
+          <div className='w-12 h-12 cursor-pointer bg-white flex 
           justify-center items-center text-primary drop-shadow-xl'>
           <BsEyeFill/>
-          </Link>
+          </div>
         </div>
       </div>
     </div>

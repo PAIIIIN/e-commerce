@@ -26,7 +26,7 @@ const Footer = () => {
     <li className="menu__item"><a className="menu__link" href="#">Contact</a></li>
 
   </ul>
-  <p className='text-white mr-12'>&copy; 2023 S1lence</p>
+  <p className='text-white'> 2023 S1lence &copy;</p>
 </footer>
 };
 
