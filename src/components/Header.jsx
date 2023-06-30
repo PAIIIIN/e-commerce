@@ -9,7 +9,7 @@ const Header = () => {
   
   return(
 
-  <header className='bg-blue-400 fixed w-full z-10'>
+  <header className='bg-red-100 fixed w-full z-10'>
     <div className='container flex items-center justify-between mx-auto h-full'>
     <div>
       <Link to='/'>

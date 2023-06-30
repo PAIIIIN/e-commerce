@@ -4,6 +4,8 @@ import { ProductContext} from '../contexts/ProductContext';
 
 import Product from '../components/Product';
 
+import Hero from '../components/Hero'
+
 const Home = () => {
 const products = useContext(ProductContext) 
 
@@ -15,6 +17,7 @@ const filteredProducts = products.filter((item)=>{
   return (
 
     <div>
+      <Hero/>
   <section className='py-16'>
     <div className='container mx-auto'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px]
@@ -22,7 +25,7 @@ const filteredProducts = products.filter((item)=>{
         {filteredProducts.map((product)=>{
           return(
 
-            <Product product={product} key={product.id}/>
+            <Product id='products' product={product} key={product.id}/>
             )
         })}
       </div>

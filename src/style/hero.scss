@@ -1,0 +1,9 @@
+.hero{
+    background-image: url('../img/bg_hero.svg');
+}
+@media screen and (max-width:1023px) {
+    .hero-img{
+        opacity: 0;
+    }
+    
+}

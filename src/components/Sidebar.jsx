@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 
-import { Link } from 'react-router-dom';
 import {IoMdArrowForward} from 'react-icons/io'
 import {FiTrash2} from 'react-icons/fi'
 
@@ -14,7 +13,7 @@ const Sidebar = () => {
   const { cart,clearCart,itemAmount,allAmount,price} = useContext(CartContext)
   return (
   <div className={`w-full bg-white fixed top-0 h-full 
-  md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px] shadow-2xl ${isOpen ? 'right-0':'-right-full'}`}>
+  md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px] shadow-2xl overflow-scroll ${isOpen ? 'right-0':'-right-full'}`}>
   
   <div className='flex items-center justify-between py-6 border-b'>
     <div className='uppercase text-sm font-semibold'>Shopping Bag ({itemAmount})</div>
